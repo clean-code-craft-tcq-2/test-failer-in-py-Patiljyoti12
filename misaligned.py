@@ -19,12 +19,4 @@ def format_color_code_manual(pair_number,major_color,minor_color):
     
 
         
-result=print_color_map(major_colors,minor_colors)
-assert (get_pair_no_from_colors('White','Blue')==1)
-assert (get_pair_no_from_colors('White','Orange')==2)
-assert (result[0]==[1,'White' ,'Blue'])
-assert ('White' in result[0])
-assert ('Blue' in result[0])
-assert (result[24]==[25, 'Violet', 'Slate'])
-print("All is well (maybe!)\n")
 
