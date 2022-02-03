@@ -7,9 +7,13 @@ def network_alert_stub(celcius):
         return 200   # Return 200 for ok
     else:
         return 500   #Return 500 for not ok
+    
+def convert_farenheit_to_celcius(farenheit):
+    celcius = (farenheit - 32) * 5 / 9
+    return celcius
 
 def alert_in_celcius(farenheit):
-    celcius = (farenheit - 32) * 5 / 9
+    celcius = convert_farenheit_to_celcius(farenheit)
     returnCode = network_alert_stub(celcius)
     if returnCode != 200:
         # non-ok response is not an error! Issues happen in life!
